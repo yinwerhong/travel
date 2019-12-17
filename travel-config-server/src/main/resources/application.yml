@@ -6,4 +6,4 @@ spring:
     config:
       server:
         git :
-          uri: https://github.com/yinwerhong/travel-config
+          uri: https://github.com/cheese8/travel-config

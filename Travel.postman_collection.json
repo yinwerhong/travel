@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "dd9f74f4-59cb-4b69-9b15-68a0a9216fd4",
+		"name": "Travel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Country service - get all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0NzM5NDI1NTYsInVzZXJfbmFtZSI6InRyYXZlbC1hZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiZWViZDkwOWMtZTJjYy00M2VhLWEzNGYtYTBmY2FjYWFiZGY1IiwiY2xpZW50X2lkIjoidHJhdmVsLWNsaWVudCIsInNjb3BlIjpbIkNPVU5UUllfUkVBRCIsIkFUVFJBQ1RJT05fUkVBRCIsIkZBVk9SSVRFX1JFQUQiXX0.M7_VSIaARyFmZ0z9geK4tNVi3ziDcFv5kXr5NnK6NNUpGVd6Hc7odjhDw_PdFlDlllotghqqH79ipTSqxJSl0sC2Hb6Lcl0scmTD7F3LICHo4OkfAjXp8x8Wm0tSzlVJI1nK9F2usZzSJKxiYp3CTBFmRWiySmVBmFeiUfPg9_tgyGKkjb0BqFRRNN_qFcwnfBb-iPwhk4KlXa8_gKCys1Ex8keHND097ZMlH28l4D6DuRtq25VO7tdYyVZ-LW8fW79enQtNbd8DjZX0TKfHUaL42OWIji1MSUKeH2mHK5r9dQR8Ej940k7eZXYpqEROugOYTOOAoZvVtxhYsRAJzQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/api/country-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"country-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth server - get token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dHJhdmVsLWNsaWVudDp0cmF2ZWwtc2VjcmV0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8765/auth/oauth/token?grant_type=password&username=travel-admin&password=travel-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"auth",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "username",
+							"value": "travel-admin"
+						},
+						{
+							"key": "password",
+							"value": "travel-password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attraction service - get all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0NzM5NDI1NTYsInVzZXJfbmFtZSI6InRyYXZlbC1hZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiZWViZDkwOWMtZTJjYy00M2VhLWEzNGYtYTBmY2FjYWFiZGY1IiwiY2xpZW50X2lkIjoidHJhdmVsLWNsaWVudCIsInNjb3BlIjpbIkNPVU5UUllfUkVBRCIsIkFUVFJBQ1RJT05fUkVBRCIsIkZBVk9SSVRFX1JFQUQiXX0.M7_VSIaARyFmZ0z9geK4tNVi3ziDcFv5kXr5NnK6NNUpGVd6Hc7odjhDw_PdFlDlllotghqqH79ipTSqxJSl0sC2Hb6Lcl0scmTD7F3LICHo4OkfAjXp8x8Wm0tSzlVJI1nK9F2usZzSJKxiYp3CTBFmRWiySmVBmFeiUfPg9_tgyGKkjb0BqFRRNN_qFcwnfBb-iPwhk4KlXa8_gKCys1Ex8keHND097ZMlH28l4D6DuRtq25VO7tdYyVZ-LW8fW79enQtNbd8DjZX0TKfHUaL42OWIji1MSUKeH2mHK5r9dQR8Ej940k7eZXYpqEROugOYTOOAoZvVtxhYsRAJzQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/api/attraction-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"attraction-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attraction service - get by country ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0NzM5NDI1NTYsInVzZXJfbmFtZSI6InRyYXZlbC1hZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiZWViZDkwOWMtZTJjYy00M2VhLWEzNGYtYTBmY2FjYWFiZGY1IiwiY2xpZW50X2lkIjoidHJhdmVsLWNsaWVudCIsInNjb3BlIjpbIkNPVU5UUllfUkVBRCIsIkFUVFJBQ1RJT05fUkVBRCIsIkZBVk9SSVRFX1JFQUQiXX0.M7_VSIaARyFmZ0z9geK4tNVi3ziDcFv5kXr5NnK6NNUpGVd6Hc7odjhDw_PdFlDlllotghqqH79ipTSqxJSl0sC2Hb6Lcl0scmTD7F3LICHo4OkfAjXp8x8Wm0tSzlVJI1nK9F2usZzSJKxiYp3CTBFmRWiySmVBmFeiUfPg9_tgyGKkjb0BqFRRNN_qFcwnfBb-iPwhk4KlXa8_gKCys1Ex8keHND097ZMlH28l4D6DuRtq25VO7tdYyVZ-LW8fW79enQtNbd8DjZX0TKfHUaL42OWIji1MSUKeH2mHK5r9dQR8Ej940k7eZXYpqEROugOYTOOAoZvVtxhYsRAJzQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/api/attraction-service/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"attraction-service",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favorite service - get all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0NzM5NDI1NTYsInVzZXJfbmFtZSI6InRyYXZlbC1hZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiZWViZDkwOWMtZTJjYy00M2VhLWEzNGYtYTBmY2FjYWFiZGY1IiwiY2xpZW50X2lkIjoidHJhdmVsLWNsaWVudCIsInNjb3BlIjpbIkNPVU5UUllfUkVBRCIsIkFUVFJBQ1RJT05fUkVBRCIsIkZBVk9SSVRFX1JFQUQiXX0.M7_VSIaARyFmZ0z9geK4tNVi3ziDcFv5kXr5NnK6NNUpGVd6Hc7odjhDw_PdFlDlllotghqqH79ipTSqxJSl0sC2Hb6Lcl0scmTD7F3LICHo4OkfAjXp8x8Wm0tSzlVJI1nK9F2usZzSJKxiYp3CTBFmRWiySmVBmFeiUfPg9_tgyGKkjb0BqFRRNN_qFcwnfBb-iPwhk4KlXa8_gKCys1Ex8keHND097ZMlH28l4D6DuRtq25VO7tdYyVZ-LW8fW79enQtNbd8DjZX0TKfHUaL42OWIji1MSUKeH2mHK5r9dQR8Ej940k7eZXYpqEROugOYTOOAoZvVtxhYsRAJzQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/api/favorite-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"favorite-service"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
